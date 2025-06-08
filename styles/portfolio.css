@@ -38,6 +38,10 @@ header p {
   text-indent: 30px;
 }
 
+nav {
+    margin-top: 1.5rem;
+}
+
 nav a {
     display: inline-block;
     background-color: #1abc9c;
@@ -56,10 +60,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-nav {
-    margin-top: 1.5rem;
-}
-
 nav a::after {
     content: '';
     display: block;
@@ -71,7 +71,7 @@ nav a::after {
 }
 
 nav a:hover::after {
-    width: 100%;
+    width: 80%;
 }
 
 section {
@@ -88,7 +88,15 @@ h2 {
     margin-bottom: 1rem;
 }
 
+h3 {
+    margin-top: -0.5rem;
+}
+
 .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
     background: #1b1b1b;
     margin: 1.5rem 0;
     padding: 1.5rem;
@@ -102,29 +110,48 @@ h2 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.project p {
+    margin: 0 0.4rem;
+}
+
+.project a.button {
+    background: #1abc9c;
+    color: #000;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-right: 20rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.project a.button:hover {
+    background: #16a085;
+    color: #fff;
+}
+
+.project a.button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #1abc9c;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+.project a.button:hover::after {
+    width: 80%;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
     color: #888;
     border-top: 1px solid #333;
     font-size: 0.9rem;
-}
-
-a.button {
-    background: #1abc9c;
-    color: #000;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 1rem;
-    transition: background 0.3s, color 0.3s;
-}
-
-a.button:hover {
-    background: #16a085;
-    color: #fff;
 }
 
 .language-icons {
@@ -154,6 +181,7 @@ a.button:hover {
     font-size: 0.9rem;
     max-width: 80px;
     margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tooltip .tooltiptext {
@@ -174,7 +202,8 @@ a.button:hover {
 }
 
 .tooltip:hover {
-    color: #16a085;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .icon, .tooltip svg {
