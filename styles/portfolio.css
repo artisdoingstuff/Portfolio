@@ -112,6 +112,7 @@ h3 {
 
 .project p {
     margin: 0 0.4rem;
+    row-gap: 20px;
 }
 
 .project a.button {
